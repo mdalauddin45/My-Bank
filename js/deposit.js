@@ -18,9 +18,12 @@ document.getElementById('deposit-btn').addEventListener('click', function () {
     const previousBalanceStirng = balanceTotalElement.innerText;
     const previousBalanceTotal = parseFloat(previousBalanceStirng);
 
+
+
     const currentBalance = previousBalanceTotal + currentDepositTotal;
 
     balanceTotalElement.innerText = currentBalance;
+
 
     // clear the deposit field
     depositField.value = ``;
@@ -45,6 +48,10 @@ document.getElementById('withdraw-btn').addEventListener('click', function () {
     const balanceTotalElement = document.getElementById('total-balance');
     const previousBalanceStirng = balanceTotalElement.innerText;
     const previousBalanceTotal = parseFloat(previousBalanceStirng);
+
+    if (newWithdrewAmount > previousBalanceTotal) {
+        alert('Ami Fokir Ami Miskin');
+    }
 
     const currentBalance = previousBalanceTotal - newWithdrewAmount;
 

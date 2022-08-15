@@ -9,7 +9,7 @@ document.getElementById('submit-btn').addEventListener('click', function () {
     const password = passwordField.value;
 
     if (email === 'mdalauddin@gmail.com' && password === "hello") {
-        console.log('valid user');
+        window.location.href = 'js/bank.html';
     }
     else {
         alert('Wrong email or password');
